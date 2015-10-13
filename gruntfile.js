@@ -24,8 +24,8 @@ module.exports = function(grunt){
         files: {
           'main/css/all.styles.min.css':
            [
-            'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
             'bower_components/bootstrap/dist/css/bootstrap.min.css',
+            'main/css/datatables.min.css',
             'main/css/style.css'
           ]
         }
@@ -47,9 +47,10 @@ module.exports = function(grunt){
       }
     },
 
+    // watch
     watch: {
       scripts: {
-        files: ['main/css/style.css', 'main/js/main.js'],
+        files: ['main/css/*.css', 'main/js/*.js', 'gruntfile.js'],
         tasks: ['csscomb', 'cssmin', 'uglify'],
         options: {
           spawn: false,

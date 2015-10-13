@@ -1,4 +1,4 @@
-<h1>Digital Ocean Dashboard 1.0 Beta</h1>
+<h1>Digital Ocean Dashboard 1.0.1 Beta</h1>
 
 ![alt tag](http://i.imgur.com/We9LzlR.png)
 

@@ -8,7 +8,7 @@ body {
   padding-top: 50px;
 }
 .main {
-  padding: 10px 20px;
+  padding: 30px 20px 20px;
 }
 
 /* Global add-ons */
@@ -22,6 +22,21 @@ body {
 
 .navbar-fixed-top {
   border: 0;
+}
+
+/* Tables */
+
+td {
+  width: 17%;
+  font-size: 16px;
+}
+
+/* buttons */
+
+.btn {
+  padding: 1px 3px;
+  margin-top: 12px;
+  float: right;
 }
 
 /* Color Picker */
@@ -73,36 +88,4 @@ body {
 }
 .colors > li:nth-child(6) {
   background-color: #fff;
-}
-
-/* Tables */
-.dataTables_filter {
-  float: right;
-}
-.pagination {
-  margin: 0;
-  float: right;
-}
-.dataTables_info {
-  margin-top: 6px;
-}
-#digitaloceantable td {
-  width: 17%;
-}
-#digitaloceantable_length, .dataTables_info, #digitaloceantable_paginate {
-  display: inline;
-}
-#digitaloceantable_paginate {
-  float: right;
-}
-#digitaloceantable_previous, #digitaloceantable_next {
-  padding: 0 5px;
-}
-
-/* button */
-
-.btn {
-  padding: 1px 3px;
-  margin-top: 12px;
-  float: right;
 }

@@ -31,48 +31,47 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 main">
-          <div class="clearfix">&nbsp;</div>
-            <table id="digitaloceantable" class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Status</th>
-                  <th>Memory</th>
-                  <th>Disk</th>
-                  <th>IP</th>
-                  <th>Location</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                $endpoint = "https://api.digitalocean.com/v2/droplets";
-                $headers[] = "Content-type: application/json";
-                $headers[] = "Authorization: Bearer $DO_API_TOKEN";
-                $curl = curl_init();
-                curl_setopt_array( $curl, [
-                  CURLOPT_HTTPHEADER     => $headers,
-                  CURLOPT_RETURNTRANSFER => true,
-                  CURLOPT_URL            => $endpoint,
-                ]);
-                $response = curl_exec( $curl );
-                $decoderesponse = json_decode( $response, true );
-                foreach ($decoderesponse['droplets'] as $droplet ) {
-                  $name = $droplet['name'];
-                  $status = $droplet['status'];
-                  $size_slug = $droplet['size_slug'];
-                  $disk = $droplet['disk'];
-                  $ipaddress = $droplet['networks']['v4'][0]['ip_address'];
-                  $region = $droplet['region']['name'];
-                  echo "<tr><td>" . $name . "</td>";
-                  echo "<td>" . $status. "</td>";
-                  echo "<td>" . $size_slug . "</td>";
-                  echo "<td>" . $disk . "gb</td>";
-                  echo "<td>" . $ipaddress . "</td>";
-                  echo "<td>" . $region . "</td></tr>";
-                }
-                ?>
-              </tbody>
-            </table>
+          <table id="digitaloceantable" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Memory</th>
+                <th>Disk</th>
+                <th>IP</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $endpoint = "https://api.digitalocean.com/v2/droplets";
+              $headers[] = "Content-type: application/json";
+              $headers[] = "Authorization: Bearer $DO_API_TOKEN";
+              $curl = curl_init();
+              curl_setopt_array( $curl, [
+                CURLOPT_HTTPHEADER     => $headers,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_URL            => $endpoint,
+              ]);
+              $response = curl_exec( $curl );
+              $decoderesponse = json_decode( $response, true );
+              foreach ($decoderesponse['droplets'] as $droplet ) {
+                $name = $droplet['name'];
+                $status = $droplet['status'];
+                $size_slug = $droplet['size_slug'];
+                $disk = $droplet['disk'];
+                $ipaddress = $droplet['networks']['v4'][0]['ip_address'];
+                $region = $droplet['region']['name'];
+                echo "<tr><td>" . $name . "</td>";
+                echo "<td>" . $status. "</td>";
+                echo "<td>" . $size_slug . "</td>";
+                echo "<td>" . $disk . "gb</td>";
+                echo "<td>" . $ipaddress . "</td>";
+                echo "<td>" . $region . "</td></tr>";
+              }
+              ?>
+            </tbody>
+          </table>
           <script type="text/javascript">
           $(document).ready(function() {
               jQuery('#digitaloceantable').DataTable({
