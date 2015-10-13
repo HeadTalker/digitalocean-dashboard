@@ -1,0 +1,108 @@
+/*
+* Base structure
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+  padding-top: 50px;
+}
+.main {
+  padding: 10px 20px;
+}
+
+/* Global add-ons */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Top Navigation */
+
+.navbar-fixed-top {
+  border: 0;
+}
+
+/* Color Picker */
+
+.tab__content {
+  display: inline;
+}
+.colors {
+  text-align: center;
+  padding-top: 15px;
+  float: right;
+}
+.colors > li {
+  list-style: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border-bottom: 5px solid rgba(0, 0, 0, .1);
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .2);
+}
+.colors > li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-bottom: 10px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+.colors > li.active-color {
+  -webkit-transform: scale(1.2) translateY(-10px);
+          transform: scale(1.2) translateY(-10px);
+}
+.colors > li:nth-child(1) {
+  background-color: #2ecc71;
+}
+.colors > li:nth-child(2) {
+  background-color: #d64a4b;
+}
+.colors > li:nth-child(3) {
+  background-color: #8e44ad;
+}
+.colors > li:nth-child(4) {
+  background-color: #46a1de;
+}
+.colors > li:nth-child(5) {
+  background-color: #ff76ea;
+}
+.colors > li:nth-child(6) {
+  background-color: #fff;
+}
+
+/* Tables */
+.dataTables_filter {
+  float: right;
+}
+.pagination {
+  margin: 0;
+  float: right;
+}
+.dataTables_info {
+  margin-top: 6px;
+}
+#digitaloceantable td {
+  width: 17%;
+}
+#digitaloceantable_length, .dataTables_info, #digitaloceantable_paginate {
+  display: inline;
+}
+#digitaloceantable_paginate {
+  float: right;
+}
+#digitaloceantable_previous, #digitaloceantable_next {
+  padding: 0 5px;
+}
+
+/* button */
+
+.btn {
+  padding: 1px 3px;
+  margin-top: 12px;
+  float: right;
+}
