@@ -75,7 +75,23 @@ $(document).ready(function(){
     // Change background to selected color
     $("html").css("background-color", newColor);
 
+    // Change background to selected color
     $(".main").css("background-color", newColor);
+
+    // Change datatables info to white
+    $(".dataTables_wrapper .dataTables_info").css("color", "#fff");
+
+    // Change label to white
+    $("label").css("color", "#fff");
+
+    // Change th in the table to white
+    $("th").css("color", "#fff");
+
+    // Change select droplets dropdown to black
+    $("select").css("color", "#333");
+
+    // Change input text to black
+    $("input").css("color", "#333");
 
   });
 });

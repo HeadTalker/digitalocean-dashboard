@@ -1,6 +1,6 @@
-<h1>Digital Ocean Dashboard 1.0.1 Beta</h1>
+<h1>Digital Ocean Dashboard 1.0.2 Beta</h1>
 
-![alt tag](http://i.imgur.com/We9LzlR.png)
+![alt tag](http://i.imgur.com/CMQMc0N.gif)
 
 <h3>Installation:</h3>
 
