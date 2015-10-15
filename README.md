@@ -1,4 +1,6 @@
-<h1>Digital Ocean Dashboard 1.0.2 Beta</h1>
+<h1>Digital Ocean Dashboard 1.0.3</h1>
+
+![alt tag](https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/badges/build.png?b=master)
 
 ![alt tag](http://i.imgur.com/NHrdpV8.gif)
 

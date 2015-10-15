@@ -48,14 +48,14 @@
               $headers[] = "Content-type: application/json";
               $headers[] = "Authorization: Bearer $DO_API_TOKEN";
               $curl = curl_init();
-              curl_setopt_array( $curl, [
+              curl_setopt_array($curl, [
                 CURLOPT_HTTPHEADER     => $headers,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_URL            => $endpoint,
               ]);
-              $response = curl_exec( $curl );
-              $decoderesponse = json_decode( $response, true );
-              foreach ($decoderesponse['droplets'] as $droplet ) {
+              $response = curl_exec($curl);
+              $decoderesponse = json_decode($response, true);
+              foreach ($decoderesponse['droplets'] as $droplet) {
                 $name = $droplet['name'];
                 $status = $droplet['status'];
                 $size_slug = $droplet['size_slug'];
@@ -63,7 +63,7 @@
                 $ipaddress = $droplet['networks']['v4'][0]['ip_address'];
                 $region = $droplet['region']['name'];
                 echo "<tr><td>" . $name . "</td>";
-                echo "<td>" . $status. "</td>";
+                echo "<td>" . $status . "</td>";
                 echo "<td>" . $size_slug . "</td>";
                 echo "<td>" . $disk . "gb</td>";
                 echo "<td>" . $ipaddress . "</td>";
@@ -74,7 +74,7 @@
           </table>
           <script type="text/javascript">
           $(document).ready(function() {
-              jQuery('#digitaloceantable').DataTable({
+              $('#digitaloceantable').DataTable({
                 "aaSorting": [],
                 "oLanguage": {
                     "sInfo": 'Showing _START_ to _END_ of _TOTAL_ Droplets.',
@@ -91,7 +91,7 @@
             <div class="well">
               <?php
                 echo "<pre>";
-                print_r(json_decode( $response, 1 ) );
+                print_r(json_decode($response, 1));
                 echo "</pre>";
               ?>
             </div>
