@@ -14,9 +14,9 @@
 
 3.  Add your digital ocean API key to config.php
 
-```
-$DO_API_TOKEN = 'REPLACE_WITH_YOUR_OWN_DIGITALOCEAN_API_TOKEN';
-```
+  ```
+  $DO_API_TOKEN = 'REPLACE_WITH_YOUR_OWN_DIGITALOCEAN_API_TOKEN';
+  ```
 4.  Make sure you have CURL and PHP installed
 
 5.  Launch your dashboard
