@@ -11,6 +11,6 @@
     <li><a href="https://cloud.digitalocean.com/support/tickets/new" target="blank">Support</a></li>
     <li><a href="https://www.digitalocean.com/community/tutorials" target="blank">Tutorials</a></li>
     <hr>
-  <?php endif;?>
+  <?php endif; ?>
   </ul>
 </div>

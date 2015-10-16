@@ -31,6 +31,6 @@
       <button class="btn btn-small" type="button" data-toggle="collapse" data-target="#collapseDeveloperMode" aria-expanded="false" aria-controls="collapseDeveloperMode">
         Developer Mode
       </button>
-    <?php endif;?>
+    <?php endif; ?>
     </div>
   </nav>
