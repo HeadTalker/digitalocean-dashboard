@@ -1,10 +1,10 @@
-<h1>Digital Ocean Dashboard 1.0.3</h1>
+<h1>Digital Ocean Dashboard 1.1.0</h1>
 
 <a href="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/"><img src="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/badges/build.png?b=master"></a> <a href="https://github.com/HeadTalker/digitalocean-dashboard/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0%2B-red.svg" alt="License"></a>
 
 <h3>Made with Bootstrap 3 and Datatables JS</h3>
 
-![alt tag](http://i.imgur.com/NHrdpV8.gif)
+![alt tag](http://i.imgur.com/OWjVBSq.gif)
 
 <h3>Installation:</h3>
 
@@ -16,6 +16,14 @@
 
 ```
 $DO_API_TOKEN = 'REPLACE_WITH_YOUR_OWN_DIGITALOCEAN_API_TOKEN';
+```
+4.  Make sure you have CURL and PHP installed
+
+5.  Launch your dashboard
+
+```
+# This may vary depending where you installed the app and/or your environment
+http://localhost/digitalocean-dashboard/main/
 ```
 
 <h3>Node Modules Install:</h3>

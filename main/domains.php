@@ -2,21 +2,18 @@
     <div class="container-fluid">
       <div class="row">
       <?php require_once '../main/sidebar.php'; ?>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main do-droplets">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main do-domains">
           <table id="digitaloceantable" class="table table-hover">
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Status</th>
-                <th>Memory</th>
-                <th>Disk</th>
-                <th>IP</th>
-                <th>Location</th>
+                <th>ttl</th>
+                <th>Zone File</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              $endpoint = "https://api.digitalocean.com/v2/droplets";
+              $endpoint = "https://api.digitalocean.com/v2/domains";
               $headers[] = "Content-type: application/json";
               $headers[] = "Authorization: Bearer $DO_API_TOKEN";
               $curl = curl_init();
@@ -27,19 +24,13 @@
               ]);
               $response = curl_exec($curl);
               $decoderesponse = json_decode($response, true);
-              foreach ($decoderesponse['droplets'] as $droplet) {
-                $name = $droplet['name'];
-                $status = $droplet['status'];
-                $size_slug = $droplet['size_slug'];
-                $disk = $droplet['disk'];
-                $ipaddress = $droplet['networks']['v4'][0]['ip_address'];
-                $region = $droplet['region']['name'];
+              foreach ($decoderesponse['domains'] as $domain) {
+                $name = $domain['name'];
+                $status = $domain['ttl'];
+                $size_slug = $domain['zone_file'];
                 echo "<tr><td>" . $name . "</td>";
                 echo "<td>" . $status . "</td>";
-                echo "<td>" . $size_slug . "</td>";
-                echo "<td>" . $disk . "GB</td>";
-                echo "<td>" . $ipaddress . "</td>";
-                echo "<td>" . $region . "</td></tr>";
+                echo "<td>" . $size_slug . "</td></tr>";
               }
               ?>
             </tbody>
@@ -49,12 +40,12 @@
               $('#digitaloceantable').DataTable({
                 "aaSorting": [],
                 "oLanguage": {
-                    "sInfo": 'Showing _START_ to _END_ of _TOTAL_ Droplets.',
-                    "sInfoEmpty": 'No Droplets yet.',
-                    "sInfoFiltered": 'filtered from _MAX_ total Droplets',
-                    "sZeroRecords": 'No Droplets Found',
-                    "sLengthMenu": 'Show _MENU_ Droplets',
-                    "sEmptyTable": "No Droplets found currently.",
+                    "sInfo": 'Showing _START_ to _END_ of _TOTAL_ domains.',
+                    "sInfoEmpty": 'No domains yet.',
+                    "sInfoFiltered": 'filtered from _MAX_ total domains',
+                    "sZeroRecords": 'No domains Found',
+                    "sLengthMenu": 'Show _MENU_ domains',
+                    "sEmptyTable": "No domains found currently.",
                   }
                 });
               });
