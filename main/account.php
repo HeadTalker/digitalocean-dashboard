@@ -18,7 +18,7 @@
           echo "<div class='col-md-12 account-info'><h3>Email</h3><h5>" . $decoderesponse['account']['email'] . "</h5></div>";
           echo "<div class='col-md-12 account-info'><h3>Droplet Limit</h3><h5>" . $decoderesponse['account']['droplet_limit'] . "</h5></div>";
           echo "<div class='col-md-12 account-info'><h3>Email Verified</h3><h5>";
-          if($decoderesponse['account']['email_verified'] == true) {
+          if ($decoderesponse['account']['email_verified'] == true) {
             echo "Yes";
           } else {
             echo "No";

@@ -1,4 +1,4 @@
-<h1>Digital Ocean Dashboard 1.1.0</h1>
+<h1>Digital Ocean Dashboard 1.1.1</h1>
 
 <a href="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/"><img src="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/badges/build.png?b=master"></a> <a href="https://github.com/HeadTalker/digitalocean-dashboard/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0%2B-red.svg" alt="License"></a>
 
