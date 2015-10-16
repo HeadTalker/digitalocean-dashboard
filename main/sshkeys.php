@@ -53,6 +53,7 @@
                 });
               });
           </script>
+        <?php if ($DO_API_DEVELOPER_MODE == true): ?>
           <div class="collapse" id="collapseDeveloperMode">
             <div class="well">
               <?php
@@ -62,6 +63,7 @@
               ?>
             </div>
           </div>
+        <?php endif;?>
         </div>
       </div>
     </div>

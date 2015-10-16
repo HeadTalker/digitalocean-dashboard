@@ -26,6 +26,7 @@
           echo "</h4></div>";
           echo "<div class='col-md-12 account-info'><h3>Unique User ID</h3><h5>" . $decoderesponse['account']['uuid'] . "</h5></div>";
           ?>
+        <?php if ($DO_API_DEVELOPER_MODE == true): ?>
           <div class="collapse" id="collapseDeveloperMode">
             <div class="well">
               <?php
@@ -35,6 +36,7 @@
               ?>
             </div>
           </div>
+        <?php endif;?>
         </div>
       </div>
     </div>
