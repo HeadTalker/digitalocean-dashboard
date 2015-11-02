@@ -1,12 +1,45 @@
 module.exports = function(grunt){
 
+  // Load The Plugins
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
   // Configure main project settings
   grunt.initConfig({
 
     // basic settings and info about our plugins
     pkg: grunt.file.readJSON('package.json'),
 
-    // css comb
+    // copy some files from bower co dist folders
+    copy: {
+      main: {
+        files: [
+          {
+            cwd: 'bower_components/bootstrap/dist/css/',
+            src: 'bootstrap.min.css',
+            dest: 'main/css/src/',
+            expand: true
+          },
+          {
+            cwd: 'bower_components/jquery/dist/',
+            src: 'jquery.js',
+            dest: 'main/js/src/',
+            expand: true
+          },
+          {
+            cwd: 'bower_components/bootstrap/dist/js/',
+            src: 'bootstrap.js',
+            dest: 'main/js/src/',
+            expand: true
+          }
+        ]
+      }
+    },
+
+    // make our css beautiful
     csscomb: {
       dist: {
         options: {
@@ -18,36 +51,36 @@ module.exports = function(grunt){
       }
     },
 
-    // cssmin
+    // minify and combine our css
     cssmin: {
       combine: {
         files: {
-          'main/css/all.styles.min.css':
+          'main/css/dist/all.styles.min.css':
            [
             'bower_components/bootstrap/dist/css/bootstrap.min.css',
-            'main/css/datatables.min.css',
-            'main/css/style.css'
+            'main/css/src/datatables.min.css',
+            'main/css/src/style.css'
           ]
         }
       }
     },
 
-    // uglify
+    // minify and combine our javascript
     uglify: {
       combine: {
         files: {
-          'main/js/all.scripts.min.js':
+          'main/js/dist/all.scripts.min.js':
            [
             'bower_components/jquery/dist/jquery.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
-            'main/js/jquery.dataTables.min.js',
-            'main/js/main.js'
+            'main/js/src/jquery.dataTables.min.js',
+            'main/js/src/main.js'
           ]
         }
       }
     },
 
-    // watch
+    // watch our files for changes
     watch: {
       scripts: {
         files: ['main/css/*.css', 'main/js/*.js', 'gruntfile.js'],
@@ -55,19 +88,13 @@ module.exports = function(grunt){
         options: {
           spawn: false,
           event:['all']
-        },
-      },
+        }
+      }
     },
 
   });
 
-  // Load The Plugins
-  grunt.loadNpmTasks('grunt-csscomb');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
   // Do the tasks
-  grunt.registerTask('default', ['csscomb', 'cssmin', 'uglify', 'watch']);
+  grunt.registerTask('default', ['copy', 'csscomb', 'cssmin', 'uglify', 'watch']);
 
 };

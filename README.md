@@ -1,4 +1,4 @@
-<h1>Digital Ocean Dashboard 1.1.3</h1>
+<h1>Digital Ocean Dashboard 1.2.0</h1>
 
 <a href="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/"><img src="https://scrutinizer-ci.com/g/HeadTalker/digitalocean-dashboard/badges/build.png?b=master"></a> <a href="https://github.com/HeadTalker/digitalocean-dashboard/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL--2.0%2B-red.svg" alt="License"></a>
 
@@ -17,9 +17,7 @@
   ```
   $DO_API_TOKEN = 'REPLACE_WITH_YOUR_OWN_DIGITALOCEAN_API_TOKEN';
   ```
-4.  Make sure you have CURL and PHP installed
-
-5.  Launch your dashboard
+4.  Launch your dashboard
 
 ```
 # This may vary depending where you installed the app and/or your environment

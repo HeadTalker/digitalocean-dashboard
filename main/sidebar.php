@@ -7,6 +7,7 @@
     <li class="<?php if (stripos($_SERVER['REQUEST_URI'], 'account.php')) { echo 'active'; }?>"><a href="../main/account.php">Account</a></li>
   <?php if ($DO_RESOURCE_LINKS == true): ?>
     <hr>
+    <li><a href="https://digitalocean.com/" target="blank">Digital Ocean</a></li>
     <li><a href="https://developers.digitalocean.com/documentation/v2/" target="blank">API Docs</a></li>
     <li><a href="https://cloud.digitalocean.com/support/tickets/new" target="blank">Support</a></li>
     <li><a href="https://www.digitalocean.com/community/tutorials" target="blank">Tutorials</a></li>

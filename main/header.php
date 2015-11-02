@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Digital Ocean Dashboard</title>
-    <link rel="stylesheet" href="css/all.styles.min.css" media="screen" title="no title" charset="utf-8">
-    <script type="text/javascript" src="js/all.scripts.min.js"></script>
+    <link rel="stylesheet" href="css/dist/all.styles.min.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/dist/all.scripts.min.js"></script>
     <?php require_once(__DIR__ . '/../config.php'); ?>
   </head>
   <body>
